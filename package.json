@@ -1,0 +1,30 @@
+{
+  "name": "mean_stack",
+  "version": "1.0.0",
+  "description": "Mean Stack With Angular 4 Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kasunjith-Bimal/MEAN_STACK.git"
+  },
+  "keywords": [
+    "Mean",
+    "Stack",
+    "with",
+    "Angular",
+    "4"
+  ],
+  "author": "Kasunjith Bimal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kasunjith-Bimal/MEAN_STACK/issues"
+  },
+  "homepage": "https://github.com/Kasunjith-Bimal/MEAN_STACK#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  }
+}
