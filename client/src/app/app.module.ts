@@ -4,17 +4,36 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
+import { NavigationComponent } from './navigation/navigation.component';
+import { routing } from './app.routing';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
+    DashbordComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    routing,
+    FormsModule,
+    HttpModule,
+    ReactiveFormsModule,
+    JsonpModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
