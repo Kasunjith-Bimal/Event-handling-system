@@ -12,6 +12,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+import { RegisterService } from './register/register.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
     JsonpModule,
   
   ],
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

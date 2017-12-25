@@ -1,0 +1,60 @@
+
+#background{
+    
+     width: 100%;
+     background: #3a6186; /* fallback for old browsers */
+     background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+     height: -webkit-fill-available;  
+   }
+   .colorbox{
+   
+       background-color: white;
+       opacity: 0.7;
+       height: 500px;
+       border-radius: 2px;
+       margin-top: 15px;
+   }
+   
+   .login-form{
+     
+      margin-top: 100px;
+   }
+   .mat-button{
+       border: 1px solid black;
+       width: 100%;
+       margin-bottom: 10px;
+   }
+   .mat-form-field {
+       display: inline-block;
+       position: relative;
+       text-align: left;
+       width: 100%;
+   }
+   .header{
+   text-align: center;
+   margin-bottom: 20px;
+   }
+
+
+   .colorbox[_ngcontent-c2] {
+    background-color: white;
+    opacity: 0.7;
+    height: auto;
+    border-radius: 2px;
+    margin-top: 175px;
+}
+
+@media (max-width: 992px){
+    
+    .colorbox[_ngcontent-c2] {
+        background-color: white;
+        opacity: 0.7;
+        height: auto;
+        border-radius: 2px;
+        margin-top: 10px;  
+    }
+    
+    }
+    

@@ -1,4 +1,4 @@
-{ 
+{
   "name": "mean_stack",
   "version": "1.0.0",
   "description": "Mean Stack With Angular 4 Application",
@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/Kasunjith-Bimal/MEAN_STACK#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "mongoose": "^4.13.7"
   }
