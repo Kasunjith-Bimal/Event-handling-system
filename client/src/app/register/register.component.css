@@ -38,7 +38,7 @@
    }
 
 
-   .colorbox[_ngcontent-c2] {
+   .colorbox[_ngcontent-c5] {
     background-color: white;
     opacity: 0.7;
     height: auto;
@@ -48,10 +48,10 @@
 
 @media (max-width: 992px){
     
-    .colorbox[_ngcontent-c2] {
+    .colorbox[_ngcontent-c5] {
         background-color: white;
         opacity: 0.7;
-        height: auto;
+        height: auto !important;
         border-radius: 2px;
         margin-top: 10px;  
     }

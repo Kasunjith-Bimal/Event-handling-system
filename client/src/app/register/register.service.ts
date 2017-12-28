@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions,Headers } from '@angular/http';
+import { Http, RequestOptions,Headers,Response } from '@angular/http';
 import { User } from './user';
-
+import "rxjs/Rx";
 @Injectable()
 export class RegisterService {
 
@@ -9,7 +9,7 @@ export class RegisterService {
   user : User ;
   OnRegisterServise(user:any){
    
-    return this.http.post('http://localhost:8080/api/user',user);
+    return this.http.post('http://localhost:8080/api/user',user).map((response: Response) => response.json());
 }
 
 }
