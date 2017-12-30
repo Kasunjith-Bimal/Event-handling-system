@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RegisterService } from './register/register.service';
 import { EqualValidatorDirective } from './register/equal-validator.directive';
+import { LoginService } from './login/login.service';
 
 @NgModule({
   declarations: [
@@ -36,10 +37,11 @@ import { EqualValidatorDirective } from './register/equal-validator.directive';
     HttpModule,
     ReactiveFormsModule,
     JsonpModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    
   
   ],
-  providers: [RegisterService],
+  providers: [RegisterService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

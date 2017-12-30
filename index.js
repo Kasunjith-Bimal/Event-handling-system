@@ -7,6 +7,7 @@ const router = express.Router();
 const authentication = require('./routes/authentication')(router);
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
 mongoose.Promise = global.Promise;
 mongoose.connect(config.uri,(err)=>{
 
