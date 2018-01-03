@@ -1,3 +1,42 @@
-<p>
-  profile works!
-</p>
+<div class="continer-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+      <div class="col-lg-2 col-md-12 col-xs-2 col-sm-2">
+        &nbsp;
+      </div>
+      <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8">
+        <img src="assets\images\user.png" class="imgUser">
+      </div>
+      <div class="col-lg-2 col-md-12 col-xs-2 col-sm-2">
+        &nbsp;
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+      <mat-list>
+        <h3 mat-line>Profile </h3>
+        <mat-list-item>
+          <!-- <mat-icon mat-list-icon>user</mat-icon> -->
+          <h4 mat-line>Name</h4>
+          <p mat-line> {{username}} </p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <!-- <mat-icon mat-list-icon>address</mat-icon> -->
+            <h4 mat-line>Address </h4>
+            <p mat-line> {{address}} </p>
+          </mat-list-item>
+        <mat-list-item>
+          <!-- <mat-icon mat-list-icon>email</mat-icon> -->
+          <h4 mat-line>Email </h4>
+          <p mat-line> {{email}} </p>
+        </mat-list-item>
+        <mat-list-item>
+          <!-- <mat-icon mat-list-icon>telephone</mat-icon> -->
+          <h4 mat-line>Telephone Number </h4>
+          <p mat-line> {{telephone}} </p>
+        </mat-list-item>
+       
+      </mat-list>
+    </div>
+  </div>
+</div>

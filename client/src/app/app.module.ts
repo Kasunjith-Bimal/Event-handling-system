@@ -15,7 +15,11 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { RegisterService } from './register/register.service';
 import { EqualValidatorDirective } from './register/equal-validator.directive';
 import { LoginService } from './login/login.service';
-
+import { ProfileService } from './profile/profile.service';
+import {MatListModule} from '@angular/material/list';
+import { AuthGuard } from './guards/auth.guard';
+import { NotAuthGuard } from './guards/not-auth.guard';
+import { EventComponent } from './event/event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,8 @@ import { LoginService } from './login/login.service';
     RegisterComponent,
     ProfileComponent,
     DashbordComponent,
-    EqualValidatorDirective
+    EqualValidatorDirective,
+    EventComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +43,10 @@ import { LoginService } from './login/login.service';
     ReactiveFormsModule,
     JsonpModule,
     MatFormFieldModule,
-    
+    MatListModule,
   
   ],
-  providers: [RegisterService,LoginService],
+  providers: [RegisterService,LoginService,ProfileService,AuthGuard,NotAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
