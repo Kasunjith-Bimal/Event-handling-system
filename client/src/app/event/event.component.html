@@ -1,3 +1,31 @@
-<p>
-  event works!
-</p>
+<mat-divider></mat-divider>
+
+<div class="container-fluid">
+  <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
+    &nbsp;
+  </div>
+  <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>{{eventMessage}}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <button mat-raised-button color="primary" *ngIf="!newEvent" (click)="newEventForm()">Add Event</button> 
+        <button mat-raised-button color="primary" disabled="loadingEvents" *ngIf="!newEvent"(click)="reloadEventForm()">Reload</button>
+      </div>
+
+    </div>
+  
+    
+    <router-outlet></router-outlet>
+    
+  </div>
+  <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
+    &nbsp;
+  </div>
+
+</div>
