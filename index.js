@@ -5,6 +5,7 @@ const config = require('./config/database');
 const path = require('path');
 const router = express.Router();
 const authentication = require('./routes/authentication')(router);
+const event = require('./routes/event')(router);
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -33,7 +34,7 @@ app.use(bodyParser.json())
 
 app.use(express.static(__dirname+'/client/dist')); 
 app.use('/api', authentication);
-    
+app.use('/api', event);  
 
 
 app.get('/', function(req, res) {

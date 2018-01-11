@@ -28,6 +28,7 @@ import { EventlistComponent } from './event/eventlist.component';
 import {MatSliderModule} from '@angular/material/slider';
 
 import { ImageUploadModule } from "angular2-image-upload";
+import { EventService } from './event/event.service';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,7 @@ import { ImageUploadModule } from "angular2-image-upload";
     
   
   ],
-  providers: [RegisterService,LoginService,ProfileService,AuthGuard,NotAuthGuard],
+  providers: [RegisterService,LoginService,ProfileService,EventService,AuthGuard,NotAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

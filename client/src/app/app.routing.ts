@@ -17,7 +17,7 @@ const APP_ROUTE_PROVIDER: Routes = [
     {path:'register',component:RegisterComponent,canActivate:[NotAuthGuard]},
     {path:'profile',component:ProfileComponent,canActivate:[AuthGuard]},
     {path:'dashbord',component:DashbordComponent,canActivate:[AuthGuard]},
-    {path:'event',component:EventComponent,canActivate:[NotAuthGuard],children:EventRouting},
+    {path:'event',component:EventComponent,canActivate:[AuthGuard],children:EventRouting},
     ];
     
 export const routing = RouterModule.forRoot(APP_ROUTE_PROVIDER);
