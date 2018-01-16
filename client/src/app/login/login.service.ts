@@ -25,6 +25,9 @@ export class LoginService {
     this.loadToken();
 
   }
+  getUserName(){
+    return this.user.username;
+  }
   loadToken() {
     const Token = localStorage.getItem('token');
     this.authToken = Token;

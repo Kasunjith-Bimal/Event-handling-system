@@ -26,7 +26,6 @@ import { AddeventComponent } from './event/addevent.component';
 import { MoredetaileventComponent } from './event/moredetailevent.component';
 import { EventlistComponent } from './event/eventlist.component';
 import {MatSliderModule} from '@angular/material/slider';
-
 import { ImageUploadModule } from "angular2-image-upload";
 import { EventService } from './event/event.service';
 
@@ -63,6 +62,7 @@ import { EventService } from './event/event.service';
     MatNativeDateModule,
     MatSliderModule,
     ImageUploadModule.forRoot(),
+    
     
   
   ],

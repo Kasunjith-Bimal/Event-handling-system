@@ -9,113 +9,34 @@
     </form>
   </div>
 </div>
-<mat-list>
-  <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <img mat-line src="assets\images\mainlogo.png" width="100px" height="100px">
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <h4 mat-line class="date"> date </h4>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <mat-list-item>
-        <h1 mat-line>
-          <b>
-            <div class="titleheading">Title</div>
-          </b>
-        </h1>
-        <p mat-line> Short Description </p>
-        <p mat-line> Data And Time </p>
-      </mat-list-item>
+<div *ngFor="let item of allEvents">
+  <mat-list>
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+        <img mat-line src="assets\images\mainlogo.png" width="100px" height="100px">
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+        <h4 mat-line class="date"> {{item.eventDate | date:'fullDate' }} </h4>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <mat-list-item>
+          <h1 mat-line>
+            <b>
+              <div class="titleheading">{{item.eventName}}</div>
+            </b>
+          </h1>
+          <p mat-line> {{item.eventShortDescription}} </p>
+          <p mat-line>{{item.eventDate | date:'fullDate' }} @ {{item.eventTime}}</p>
+        </mat-list-item>
+
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+        <button mat-raised-button color="primary">Details</button>
+      </div>
 
     </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <button mat-raised-button color="primary">Details</button>
-    </div>
+  </mat-list>
+  <mat-divider></mat-divider>
 
-  </div>
-</mat-list>
-<mat-divider></mat-divider>
-<mat-list>
-  <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <img mat-line src="assets\images\mainlogo.png" width="100px" height="100px">
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <h4 mat-line class="date"> date </h4>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <mat-list-item>
-        <h1 mat-line>
-          <b>
-            <div class="titleheading">Title</div>
-          </b>
-        </h1>
-        <mat-divider></mat-divider>
-        <p mat-line> Short Description </p>
-        <p mat-line> Data And Time </p>
-      </mat-list-item>
 
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <button mat-raised-button color="primary">Details</button>
-    </div>
-
-  </div>
-</mat-list>
-<mat-divider></mat-divider>
-<mat-list>
-  <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <img mat-line src="assets\images\mainlogo.png" width="100px" height="100px">
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <h4 mat-line class="date"> date </h4>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <mat-list-item>
-        <h1 mat-line>
-          <b>
-            <div class="titleheading">Title</div>
-          </b>
-        </h1>
-        <mat-divider></mat-divider>
-        <p mat-line> Short Description </p>
-        <p mat-line> Data And Time </p>
-      </mat-list-item>
-
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <button mat-raised-button color="primary">Details</button>
-    </div>
-
-  </div>
-</mat-list>
-<mat-divider></mat-divider>
-<mat-list>
-  <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <img mat-line src="assets\images\mainlogo.png" width="100px" height="100px">
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <h4 mat-line class="date"> date </h4>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <mat-list-item>
-        <h1 mat-line>
-          <b>
-            <div class="titleheading">Title</div>
-          </b>
-        </h1>
-        <mat-divider></mat-divider>
-        <p mat-line> Short Description </p>
-        <p mat-line> Data And Time </p>
-      </mat-list-item>
-
-    </div>
-    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-      <button mat-raised-button color="primary">Details</button>
-    </div>
-
-  </div>
-</mat-list>
+</div>

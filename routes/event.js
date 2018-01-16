@@ -26,8 +26,8 @@ module.exports = (router) => {
                                 eventShortDescription: req.body.eventShortDescription,
                                 eventLongDescription: req.body.eventLongDescription,
                                 eventDate: req.body.eventDate,
-                                eventTime: req.body.eventTime
-
+                                eventTime: req.body.eventTime,
+                                eventCreatedBy: req.body.eventCreatedBy
 
                             });
                             event.save((err) => {
@@ -55,7 +55,7 @@ module.exports = (router) => {
                                             }
                                         }
                                     }
-                                    
+
                                 } else {
                                     res.json({ success: true, message: 'Event is Created' });
                                 }
@@ -65,6 +65,23 @@ module.exports = (router) => {
                 }
             }
         }
+    });
+
+
+    router.get('/allEvents', (req, res) => {
+        Event.find({}, (err, events) => {
+            if (err) {
+                res.json({ success: false, message: err });
+            }else{
+                if(!events){
+                    res.json({ success: false, message: "No Event Found" });
+                }else{
+                    res.json({ success: true, events: events });
+                }
+            }
+
+        }).sort({'_id':-1});
+
     });
     return router;
 };
