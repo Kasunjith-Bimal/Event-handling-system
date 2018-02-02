@@ -32,9 +32,10 @@ export class AddeventComponent implements OnInit {
   onSubmit() {
     const time1 = this.eventobj.eventtimehoures + ":" + this.eventobj.eventminite;
     this.eventobj.eventTime = time1;
-    this.eventobj.eventCreatedBy = localStorage.getItem('user');
     
-    console.log(this.eventobj);
+    this.eventobj.eventCreatedBy =localStorage.getItem('username');
+    console.log(localStorage.getItem('username'));
+    console.log(this.eventobj.eventDate);
     // console.log(this.sendeventObj);
     this.eventService.onEventAddServise(this.eventobj).subscribe(data => console.log(data));
     this.router.navigate(['/event']);

@@ -3,20 +3,20 @@
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 searchBox">
     <form class="example-form">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Search Event Name" value="Event name">
+        <input matInput placeholder="Search Event Name" #txtSearch >
       </mat-form-field>
-      <button mat-fab color="primary">Search </button>
+      
     </form>
   </div>
 </div>
-<div *ngFor="let item of allEvents">
+<div *ngFor="let item of allEvents | searchfilter: 'eventName' : txtSearch.value | paginate: { itemsPerPage: 4, currentPage: p }">
   <mat-list>
     <div class="row">
       <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
         <img mat-line src="assets\images\mainlogo.png" width="100px" height="100px">
       </div>
       <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-        <h4 mat-line class="date"> {{item.eventDate | date:'fullDate' }} </h4>
+        <h4 mat-line class="date"> {{item.eventDate }} </h4>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <mat-list-item>
@@ -26,7 +26,8 @@
             </b>
           </h1>
           <p mat-line> {{item.eventShortDescription}} </p>
-          <p mat-line>{{item.eventDate | date:'fullDate' }} @ {{item.eventTime}}</p>
+          <p mat-line>{{item.eventDate }} @ {{item.eventTime}}</p>
+         <p mat-line>Createted By :{{item.eventCreatedBy}}</p>
         </mat-list-item>
 
       </div>
@@ -38,5 +39,7 @@
   </mat-list>
   <mat-divider></mat-divider>
 
-
+  
+  
 </div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

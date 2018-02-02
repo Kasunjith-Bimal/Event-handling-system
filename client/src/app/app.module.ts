@@ -28,7 +28,9 @@ import { EventlistComponent } from './event/eventlist.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { ImageUploadModule } from "angular2-image-upload";
 import { EventService } from './event/event.service';
-
+import { SearchfilterPipe } from './event/searchfilter.pipe';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +44,7 @@ import { EventService } from './event/event.service';
     AddeventComponent,
     MoredetaileventComponent,
     EventlistComponent,
+    SearchfilterPipe,
     
   ],
   imports: [
@@ -61,7 +64,9 @@ import { EventService } from './event/event.service';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSliderModule,
+    MatPaginatorModule,
     ImageUploadModule.forRoot(),
+    NgxPaginationModule
     
     
   

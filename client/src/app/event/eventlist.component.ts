@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from './event.service';
 import { EventObj } from './eventobj';
+import { PageEvent } from '@angular/material';
 
 @Component({
   selector: 'app-eventlist',
@@ -10,8 +11,11 @@ import { EventObj } from './eventobj';
 export class EventlistComponent implements OnInit {
 
   constructor(private eventService: EventService) { }
-
   allEvents;
+  searchtest;
+  p: number = 1;
+  
+ 
   GetAllEventsData() {
    
     this.eventService.getAllEvents().subscribe(data=>{
@@ -23,6 +27,8 @@ export class EventlistComponent implements OnInit {
     });
 
   }
+
+  
   ngOnInit() {
 
     this.GetAllEventsData();

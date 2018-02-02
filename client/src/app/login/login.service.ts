@@ -48,6 +48,11 @@ export class LoginService {
 
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify(user));
+    console.log(user);
+    localStorage.setItem('username', JSON.stringify(user.username));
+    console.log(localStorage.getItem('username'));
+    console.log(user.username);
+   
     this.authToken = token;
     this.user = user;
 
