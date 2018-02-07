@@ -83,5 +83,27 @@ module.exports = (router) => {
         }).sort({'_id':-1});
 
     });
+    router.get('/singleEvent/:id', (req, res) => {
+
+        if(!req.params.id){
+            res.json({ success: false, message: "No Event ID Provide" })
+        }else{
+            Event.findOne({_id:req.params.id}, (err, events) => {
+                if (err) {
+                    res.json({ success: false, message: err });
+                }else{
+                    if(!events){
+                        res.json({ success: false, message: "No Event Found" });
+                    }else{
+                        res.json({ success: true, events: events });
+                    }
+                }
+    
+            })
+        }
+        
+
+    });
+
     return router;
 };

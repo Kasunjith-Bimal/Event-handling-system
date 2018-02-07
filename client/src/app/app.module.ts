@@ -31,6 +31,7 @@ import { EventService } from './event/event.service';
 import { SearchfilterPipe } from './event/searchfilter.pipe';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { EditeventComponent } from './event/editevent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     MoredetaileventComponent,
     EventlistComponent,
     SearchfilterPipe,
+    EditeventComponent,
     
   ],
   imports: [

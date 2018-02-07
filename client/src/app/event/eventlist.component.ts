@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { EventService } from './event.service';
 import { EventObj } from './eventobj';
 import { PageEvent } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eventlist',
@@ -10,11 +11,12 @@ import { PageEvent } from '@angular/material';
 })
 export class EventlistComponent implements OnInit {
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService,private router: Router) { }
   allEvents;
   searchtest;
   p: number = 1;
-  
+  @Input() eventDataId: number;
+  @Input() MoreDetails :any;
  
   GetAllEventsData() {
    
@@ -27,10 +29,14 @@ export class EventlistComponent implements OnInit {
     });
 
   }
+  Listitem(id:any){
+console.log(id);
 
+this.router.navigate(['/event',id]);
+  }
   
   ngOnInit() {
-
+console.log(this.MoreDetails);
     this.GetAllEventsData();
     
   }

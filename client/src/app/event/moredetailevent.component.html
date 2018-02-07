@@ -1,3 +1,22 @@
-<p>
-  moredetailevent works!
-</p>
+<div class="col-lg-7 col-md-7 col-xs-12 col-ms-12">
+  <img mat-line src="assets\images\mainlogo.png" width="100px" height="100px">
+</div>
+<div class="col-lg-5 col-md-5 col-xs-12 col-ms-12">
+
+ {{eventdataobj.eventName}}
+
+
+ {{eventdataobj.eventLongDescription}}
+
+
+  {{eventdataobj.eventDate}}  
+
+
+
+  {{eventdataobj.eventTime}}  
+
+  {{eventdataobj.eventCreatedBy}}  
+
+
+ <button mat-raised-button color="primary" (click)="editEvent(eventdataobj._id)">Edit Event</button> 
+</div>

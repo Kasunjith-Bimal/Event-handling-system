@@ -9,7 +9,7 @@
     </form>
   </div>
 </div>
-<div *ngFor="let item of allEvents | searchfilter: 'eventName' : txtSearch.value | paginate: { itemsPerPage: 4, currentPage: p }">
+<div *ngFor="let item of allEvents  | searchfilter: 'eventName' : txtSearch.value | paginate: { itemsPerPage: 4, currentPage: p }">
   <mat-list>
     <div class="row">
       <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -32,7 +32,7 @@
 
       </div>
       <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-        <button mat-raised-button color="primary">Details</button>
+        <button mat-raised-button color="primary" (click)="Listitem(item._id)">Details</button>
       </div>
 
     </div>
